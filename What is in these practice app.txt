@@ -1,9 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import Cards from './Components/Cards';
+In These practice app we have the following objectives for passing data from parent to child components in React
 
-function App() {
-  // ******************* This is an array which contains multipule object****************
+1) loop on the array using for loop these is the static method  
+	
+Syntex of loop in array
+	// *************************Loop on array with the help of for loop***************
+  	let newcard =[]  
+  	for (let i = 0; i < mycard.length; i++) {
+      	newcard.push(
+        	<div>
+          		name:<h3>{mycard[i].name}</h3>
+         		details:<h3>{mycard[i].details}</h3>
+        	</div>
+      )
+}
+
+
+2) Using map() method to loop on the array
+
+Syntex of map() method in array
+// ******************* This is an array which contains multipule object****************
   var mycard = [
     
     {
@@ -24,21 +39,6 @@ function App() {
       details:'A classic car is a vehicle that is considered to have historical or collector value. Classic cars are typically at least 25 years old, and are often prized for their unique design, craftsmanship, or cultural significance.',
       button:'Facebook',
     },
-
-  ];
-  // *************************Loop on array with the help of for loop***************
-  // let newcard =[]  
-  //   for (let i = 0; i < mycard.length; i++) {
-  //       newcard.push(
-  //         <div>
-  //           name:<h3>{mycard[i].name}</h3>
-  //           details:<h3>{mycard[i].details}</h3>
-  //         </div>
-  //       )
-  // }
-  // **************************For loop on array end**********************************
-
-  // *****************Using ofƒarray.map method for using loop on array****************
   var newcard = mycard.map(
     (item) => {
       return(
@@ -60,5 +60,5 @@ function App() {
       {newcard}
     </>
   );
-}
-export default App;
+
+Note: these all work in "App.js" component file
